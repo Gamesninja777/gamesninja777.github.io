@@ -1,0 +1,276 @@
+/* Grundlegende Styles */
+body {
+  background-color: #050247;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.frmtx {
+  --font-size: 100%;
+  --font-family: inherit;
+  --font-color: inherit;
+  --background-color: #073DFF;
+  --border-color: #073DFF;
+  --border-width: 1px;
+  --border-radius: 5px;
+margin: 1rem;min-width: 240px}
+.frmtx * {color: var(--font-color);font-family: var(--font-family);font-size: var(--font-size);margin: 0;padding: 0;appearance: auto;outline: none;box-sizing: border-box}
+.frmtx label {padding: 0;margin: 1em 0 .3em;display: block;line-height: 1.3}
+.frmtx label:first-child {margin-top: 0}
+.frmtx input, .frmtx textarea, .frmtx button {border: var(--border-width) solid var(--border-color);border-radius: var(--border-radius);background-color: var(--background-color)}
+.frmtx input, .frmtx textarea {width: 100%;resize: none;padding: .5em;line-height: 1.3}
+.frmtx input[name="_gotcha"] {display:none}
+.frmtx input[type="checkbox"] {display: inline;width: 1.1em;height: 1.1em;appearance: auto;margin-right: .2em}
+.frmtx button {display: block;padding: .5em 1.5em;margin: 1.5em 0 0;line-height: 1.5;font-weight: bold;cursor: pointer}
+
+nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #073DFF;
+  text-align: center;
+}
+
+nav a {
+  display: inline-block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.875rem; /* 30px */
+  background-color: #073DFF;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover:not(.active) {
+  background-color: #111;
+}
+
+.Titel, .Untertitel {
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid black;
+  border-radius: 50px;
+  margin: 1% 5%;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+}
+
+.Titel {
+  background-color: #04A083;
+}
+
+.Untertitel {
+  background-color: #025235;
+}
+
+/* Textblöcke */
+.Text, .Text2 {
+  padding: 0 10%;
+  max-width: 100%;
+  font-size: 2rem;
+  margin: 1rem auto;
+  box-sizing: border-box;
+}
+
+.Text2 {
+  list-style-type: disc;
+  padding-left: 12%;
+}
+
+/* Flex-Container für Text + Bild */
+.TextContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.TextContainer ul {
+  flex: 1 1 300px;
+  padding-left: 1rem;
+}
+
+.TextContainer img {
+  flex: 0 0 200px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Mittige Bilder mit Text darunter */
+.Mitten {
+  text-align: center;
+  padding: 0 5%;
+  margin-bottom: 1rem;
+}
+
+.Mitten img {
+  width: 200px;
+  max-width: 25vw;
+  margin: 0 1rem;
+}
+
+/* Text unter Bildern */
+.Text3 {
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.Text3 p {
+  margin: 0.5rem;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* Linkbilder (Social Media Icons) */
+.Linkbild {
+  margin: 1%;
+  height: 20%;
+  width: 20%;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.Linkbild:hover {
+  transform: scale(1.1);
+}
+
+/* ... dein vorhandener Code bleibt wie er ist ... */
+
+/* Responsive Anpassungen */
+@media (max-width: 900px) {
+  nav a {
+    font-size: 1.5rem;
+    padding: 12px 10px;
+  }
+
+  .Titel, .Untertitel {
+    font-size: 1.75rem;
+    margin: 1% 3%;
+  }
+
+  .Text, .Text2 {
+    font-size: 1.75rem;
+    padding: 0 5%;
+  }
+
+  .TextContainer {
+    padding: 0 5%;
+  }
+
+  .TextContainer ul {
+    flex: 1 1 100%;
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .TextContainer img {
+    flex: 1 1 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .Mitten img {
+    width: 140px;
+    margin: 0 0.5rem 1rem;
+  }
+
+  .Text3 {
+    gap: 3rem;
+    font-size: 1.5rem;
+  }
+
+  .Linkbild {
+    height: 40px;
+    width: 40px;
+  }
+
+  /* ▶ Responsive Styles für frmtx unter 900px */
+  .frmtx {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+
+  .frmtx input,
+  .frmtx textarea {
+    font-size: 1rem;
+    padding: 0.5em;
+  }
+
+  .frmtx label {
+    font-size: 1rem;
+  }
+
+  .frmtx button {
+    font-size: 1rem;
+    padding: 0.6em 1.2em;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+    font-size: 1.2rem;
+    padding: 10px 8px;
+  }
+
+  .Titel, .Untertitel {
+    font-size: 1.4rem;
+  }
+
+  .Text, .Text2 {
+    font-size: 1.2rem;
+    padding: 0 3%;
+  }
+
+  .Text3 {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .Mitten img {
+    width: 100px;
+    margin: 0 0.3rem 1rem;
+  }
+
+  .Linkbild {
+    height: 35px;
+    width: 35px;
+    margin: 0.5%;
+  }
+
+  /* ▶ Responsive Styles für frmtx unter 480px */
+  .frmtx {
+    width: 95%;
+    margin: 1rem auto;
+    padding: 0.5rem;
+  }
+
+  .frmtx label {
+    font-size: 0.95rem;
+  }
+
+  .frmtx input,
+  .frmtx textarea {
+    font-size: 0.95rem;
+    padding: 0.4em;
+  }
+
+  .frmtx button {
+    font-size: 0.95rem;
+    padding: 0.5em;
+    width: 100%;
+  }
+}
